@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 use std::sync::Arc;
 
 use crate::errors::AppError;
-use crate::services::ai::{parser, prompts};
+use crate::services::ai::prompts;
 
 use super::AppState;
 

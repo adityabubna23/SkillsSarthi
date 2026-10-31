@@ -78,7 +78,7 @@ export default function LandingPage() {
     <div className="min-h-screen gradient-mesh">
       {/* Navigation Bar */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--glass-border)] bg-[var(--surface-900)]/80 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto h-16 flex items-center justify-between" style={{ padding: "0 48px" }}>
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl gradient-brand flex items-center justify-center">
               <Sparkles size={18} className="text-white" />
@@ -92,35 +92,35 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+      <section className="relative overflow-hidden" style={{ paddingTop: "160px", paddingBottom: "100px", paddingLeft: "48px", paddingRight: "48px" }}>
         {/* Decorative orbs */}
         <div className="absolute top-20 left-1/4 w-[500px] h-[500px] rounded-full bg-[var(--brand-600)]/10 blur-[120px] pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-[var(--accent-500)]/8 blur-[100px] pointer-events-none" />
 
         <div className="max-w-4xl mx-auto text-center relative">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--brand-600)]/10 border border-[var(--brand-600)]/20 text-[var(--brand-400)] text-sm font-medium mb-8 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--brand-600)]/10 border border-[var(--brand-600)]/20 text-[var(--brand-400)] text-sm font-medium mb-6 animate-fade-in-up">
             <Sparkles size={14} />
             AI-Powered Career Companion
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] animate-fade-in-up" style={{ marginBottom: "24px", animationDelay: "0.1s" }}>
             Your Skills.{" "}
             <span className="bg-gradient-to-r from-[var(--brand-400)] to-[var(--accent-400)] bg-clip-text text-transparent">
               Your Future.
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto animate-fade-in-up" style={{ marginBottom: "40px", animationDelay: "0.2s" }}>
             Understand your strengths, identify your gaps, and become better
             prepared for meaningful career opportunities — powered by AI that
             values your skills over your pedigree.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            <Link href="/resume" className="btn-primary text-base py-3.5 px-8">
+            <Link href="/resume" className="btn-primary text-base py-3.5 px-6">
               Analyze Your Resume <ArrowRight size={18} />
             </Link>
-            <Link href="/dashboard" className="btn-secondary text-base py-3.5 px-8">
+            <Link href="/dashboard" className="btn-secondary text-base py-3.5 px-6">
               Explore Dashboard
             </Link>
           </div>
@@ -128,10 +128,10 @@ export default function LandingPage() {
       </section>
 
       {/* Features Grid */}
-      <section className="py-20 px-6">
+      <section style={{ padding: "80px 48px" }}>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="text-center" style={{ marginBottom: "56px" }}>
+            <h2 className="text-3xl md:text-4xl font-bold text-white" style={{ marginBottom: "16px" }}>
               Everything you need to level up
             </h2>
             <p className="text-[var(--text-secondary)] max-w-lg mx-auto">
@@ -144,20 +144,22 @@ export default function LandingPage() {
               <Link
                 key={feature.href}
                 href={feature.href}
-                className="glass-card p-6 group cursor-pointer"
+                className="glass-card group cursor-pointer"
+                style={{ padding: "32px" }}
               >
                 <div
-                  className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                  style={{ marginBottom: "20px" }}
                 >
                   <span className="text-white">{feature.icon}</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[var(--brand-400)] transition-colors">
+                <h3 className="text-lg font-semibold text-white group-hover:text-[var(--brand-400)] transition-colors" style={{ marginBottom: "8px" }}>
                   {feature.title}
                 </h3>
                 <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
                   {feature.description}
                 </p>
-                <div className="mt-4 flex items-center gap-1 text-sm text-[var(--brand-400)] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="flex items-center gap-1 text-sm text-[var(--brand-400)] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ marginTop: "20px" }}>
                   Get started <ArrowRight size={14} />
                 </div>
               </Link>
@@ -167,21 +169,21 @@ export default function LandingPage() {
       </section>
 
       {/* Principles */}
-      <section className="py-16 px-6 border-t border-[var(--glass-border)]">
+      <section className="border-t border-[var(--glass-border)]" style={{ padding: "80px 48px" }}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-white text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center" style={{ marginBottom: "48px" }}>
             Built on principles that matter
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "40px" }}>
             {principles.map((principle, i) => (
               <div key={i} className="text-center">
-                <div className="w-10 h-10 rounded-lg bg-[var(--brand-600)]/15 flex items-center justify-center mx-auto mb-3 text-[var(--brand-400)]">
+                <div className="w-12 h-12 rounded-xl bg-[var(--brand-600)]/15 flex items-center justify-center mx-auto text-[var(--brand-400)]" style={{ marginBottom: "16px" }}>
                   {principle.icon}
                 </div>
-                <h3 className="text-sm font-semibold text-white mb-1">
+                <h3 className="text-base font-semibold text-white" style={{ marginBottom: "8px" }}>
                   {principle.title}
                 </h3>
-                <p className="text-xs text-[var(--text-muted)] leading-relaxed">
+                <p className="text-sm text-[var(--text-muted)] leading-relaxed">
                   {principle.description}
                 </p>
               </div>
@@ -191,7 +193,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-[var(--glass-border)] py-8 px-6">
+      <footer className="border-t border-[var(--glass-border)]" style={{ padding: "40px 48px" }}>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <Sparkles size={16} className="text-[var(--brand-400)]" />

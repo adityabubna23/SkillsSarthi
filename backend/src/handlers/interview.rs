@@ -5,7 +5,6 @@ use std::sync::Arc;
 
 use crate::errors::AppError;
 use crate::models::interview::InterviewPrep;
-use crate::services::ai::client::GeminiClient;
 use crate::services::ai::{parser, prompts};
 
 use super::AppState;
